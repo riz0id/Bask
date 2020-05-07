@@ -1,0 +1,60 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 85056eaf33a1618eedc3b8b349706bd2ef987128d8889be620b8147f93af9fae
+
+name:           biology
+version:        0.1.0.0
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+executable biology
+  main-is: Main.hs
+  other-modules:
+      API.UniProt.HTTP
+      API.UniProt.Parse
+      API.UniProt.Parse.Metaparse
+      API.UniProt.Parse.UniAccession
+      API.UniProt.Parse.UniDate
+      API.UniProt.Parse.UniDescription
+      API.UniProt.Parse.UniGeneName
+      API.UniProt.Parse.UniID
+      API.UniProt.Parse.UniOrganismClass
+      API.UniProt.Parse.UniOrganismCross
+      API.UniProt.Parse.UniOrganismHost
+      API.UniProt.Parse.UniOrganismSpecies
+      API.UniProt.Parse.UniProtLine
+      API.UniProt.UniProtKB
+      API.UniProt.UniProtKB.UniAccession
+      API.UniProt.UniProtKB.UniDate
+      API.UniProt.UniProtKB.UniDescription
+      API.UniProt.UniProtKB.UniGeneName
+      API.UniProt.UniProtKB.UniID
+      API.UniProt.UniProtKB.UniOrganismClass
+      API.UniProt.UniProtKB.UniOrganismCross
+      API.UniProt.UniProtKB.UniOrganismHost
+      API.UniProt.UniProtKB.UniOrganismSpecies
+      Armory.Count
+      DNA
+      Paths_biology
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      accelerate ==1.3.0.0
+    , accelerate-llvm-native ==1.3.0.0
+    , attoparsec
+    , base >=4.7 && <5
+    , curl
+    , fused-effects
+    , lens
+    , lens-accelerate
+    , monad-unlift
+    , text
+    , transformers ==0.5.6.2
+  default-language: Haskell2010
